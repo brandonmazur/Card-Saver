@@ -19,4 +19,17 @@ router.get('/coordinates', async (req, res) => {
   }).catch(err => console.log(err))
 })
 
+router.post('/coordinates', (req, res) => {
+    console.log(req.query)
+    const coordinates = new Coordinates({long: req.query.long, lat: req.query.lat, time: req.query.time});
+    coordinates.save(function(err) {
+        if(err) {
+            console.log(err)
+            res.send(err)
+        } else {
+            res.send("Success")
+        }  
+    })
+})
+  
 module.exports = router

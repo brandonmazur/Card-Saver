@@ -15,4 +15,4 @@ mongoose.connect(uri, { useNewUrlParser: true , useUnifiedTopology: true})
 
 app.use("/", require("./routes/coordinatesRoute"))
 
-app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`));
+app.listen(process.env.PORT || apiPort, () => console.log(`Server running on port ${apiPort}`));

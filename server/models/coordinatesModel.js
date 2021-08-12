@@ -2,7 +2,9 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema
 
 const coordinatesSchema = new Schema({
-    coordinates: {type: String, required: true},
+    lat: {type: String, required: true},
+    long: {type: String, required: true},
+    time: {type: String, required: true}
 });
     
 

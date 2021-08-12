@@ -1,22 +1,17 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors');
-const apiPort = 3000
-const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://defaultuser:card-saver@cluster0.3mczq.mongodb.net/card-saver-db?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+const mongoose = require('mongoose');
 
-app.use(bodyParser.urlencoded({ extended: true }))
+const apiPort = 3000
+const uri = "mongodb+srv://defaultuser:defaultpassword@cluster0.3mczq.mongodb.net/card-saver-db"
+
+
 app.use(cors())
 app.use(express.json());
-app.use(bodyParser.json())
 
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
+
+mongoose.connect(uri, { useNewUrlParser: true , useUnifiedTopology: true})
 
 app.use("/", require("./routes/coordinatesRoute"))
 

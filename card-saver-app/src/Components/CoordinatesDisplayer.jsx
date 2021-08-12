@@ -2,6 +2,6 @@ import React, { Component } from 'react';
 
 export const CoordinatesDisplayer = (props)  => {
     return (
-        <p>{props.lat}, {props.long}</p>
+        <p>Your card is located at {props.lat}°, {props.long}°</p>
     );
 }

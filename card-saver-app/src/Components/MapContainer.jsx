@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
-import CurrentLocation from './Map';
-
-const mapStyles = {
-    width: '50%',
-    height: '50%'
-};
+import { GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
+import CardCurrentLocation from './CardCurrentLocation';
 
 export class MapContainer extends Component {
   state = {
@@ -32,7 +27,7 @@ export class MapContainer extends Component {
 
   render() {
     return (
-      <CurrentLocation
+      <CardCurrentLocation
         centerAroundCurrentLocation
         google={this.props.google}
       >
@@ -46,7 +41,7 @@ export class MapContainer extends Component {
             <h4>{this.state.selectedPlace.name}</h4>
           </div>
         </InfoWindow>
-      </CurrentLocation>
+      </CardCurrentLocation>
     );
   }
 }
@@ -54,5 +49,5 @@ export class MapContainer extends Component {
 
 
 export default MapContainer = GoogleApiWrapper({
-        apiKey: 'insert-api-key'
-    })(MapContainer);
+  apiKey: 'AIzaSyBpg_e7eQwhNG-xBGN2NDgSjeHgryLTxg4'
+})(MapContainer);

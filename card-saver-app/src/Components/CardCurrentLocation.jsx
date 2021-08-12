@@ -11,7 +11,7 @@ const mapStyles = {
   }
 };
 
-export class CurrentLocation extends React.Component {
+export class CardCurrentLocation extends React.Component {
     constructor(props) {
         super(props);
     
@@ -121,7 +121,7 @@ export class CurrentLocation extends React.Component {
       }
 }
 
-CurrentLocation.defaultProps = {
+CardCurrentLocation.defaultProps = {
     zoom: 14,
     initialCenter: {
       lat: 38.9259,
@@ -131,4 +131,4 @@ CurrentLocation.defaultProps = {
     visible: true
   };
 
-  export default CurrentLocation;
+  export default CardCurrentLocation;

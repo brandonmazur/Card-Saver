@@ -34,7 +34,21 @@ getAllCoordinates = async (_, res) => {
     }).catch(err => console.log(err))
 }
 
+postCoordinate = (req, res) => {
+    const coordinates = new Coordinates({long: req.query.long, lat: req.query.lat, time: req.query.time});
+    coordinates.save(function(err) {
+        if(err) {
+            console.log(err)
+            res.send(err)
+        } else {
+            res.send("Success")
+        }  
+    })
+    
+}
+
 module.exports = {
     getAllCoordinates,
     getLastCoordinates,
+    postCoordinate
 }

@@ -8,4 +8,6 @@ router.get('/lastCoordinates', CoordinatesController.getLastCoordinates )
 // get all coordinates
 router.get('/allCoordinates', CoordinatesController.getAllCoordinates)
 
+router.post('/coordinates', CoordinatesController.postCoordinate)
+  
 module.exports = router

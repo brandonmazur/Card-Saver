@@ -9,7 +9,7 @@ export class CardSaver extends Component {
   }
 
   async getLastCoordinates() {
-    await fetch("/lastCoordinates").then(res => {
+    await fetch('http://card-saver.herokuapp.com/lastCoordinates').then(res => {
       if (res.ok) {
         return res.json();
       }

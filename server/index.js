@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-const apiPort = 3000
+const apiPort = 8000
 const uri = "mongodb+srv://defaultuser:defaultpassword@cluster0.3mczq.mongodb.net/card-saver-db"
 
 

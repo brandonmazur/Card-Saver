@@ -1,6 +1,26 @@
 import React, { Component } from 'react';
 import { MapContainer } from './MapContainer';
 import { CoordinatesDisplayer } from './CoordinatesDisplayer';
+import {getLocation} from './GetUserPos';
+// import { getParams } from './GetUserPos';
+import calculateDistance from './CalculateDist';
+
+let parameters = {"data":{}}
+
+async function attemptBack() {
+  const response =  await fetch('/lastCoordinates')
+  const body = await response.json()
+  return (body)
+  // console.log(body.data)
+}
+
+let card = attemptBack()
+let user = getLocation()
+console.log(user)
+// console.log(calculateDistance(card,user))
+
+// attemptBack();
+
 
 export class CardSaver extends React.Component {
     constructor(props) {

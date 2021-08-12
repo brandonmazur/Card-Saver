@@ -5,7 +5,7 @@ export class MapContainer extends Component {
     render() {
         return (
             <p>
-                This is where Map will go
+                This is where Map will go in the future
             </p>
         );
     }

@@ -82,7 +82,7 @@ export function CardSaver() {
 
   return (
     <div>
-      <MapContainer lat={lat} long={long}/>
+      <MapContainer user={user} card={card}/>
       {hasData && Distance()}
     </div>
   );

@@ -72,7 +72,7 @@ export function CardSaver() {
   return (
     <div>
       {/*<h2>Your card's location as of {this.state.date.toLocaleTimeString()}</h2>*/}
-      <MapContainer />
+      <MapContainer user={user} card={card}/>
       <CoordinatesDisplayer lat={lat} long={long}/>
     </div>
   );

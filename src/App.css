@@ -45,7 +45,7 @@
 
 .Card-deactivate {
   position: absolute;
-  top: 398px;
+  top: 410px;
   height: 10vmin;
   pointer-events: none;
   left: 90px;
@@ -54,7 +54,7 @@
 
 .Anti-theft {
   position: absolute;
-  top: 448px;
+  top: 460px;
   height: 10vmin;
   pointer-events: none;
   left: 90px;
@@ -63,7 +63,7 @@
 
 .Tracking {
   position: absolute;
-  top: 498px;
+  top: 510px;
   height: 10vmin;
   pointer-events: none;
   left: 90px;
@@ -192,7 +192,7 @@
   top: 605px; 
   height: 10vmin;
   pointer-events: none;
-  left: 80px;
+  left: 50px;
 }
 
 .Remove-card {
@@ -200,7 +200,7 @@
   top: 605px; 
   height: 10vmin;
   pointer-events: none;
-  right: 80px;
+  right: 50px;
 }
 
 .App-link {

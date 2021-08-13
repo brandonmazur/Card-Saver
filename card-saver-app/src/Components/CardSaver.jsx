@@ -30,7 +30,6 @@ export function CardSaver() {
           return res.json();
         }
       }).then(jsonRes => {
-        console.log(jsonRes);
         try {
           setLat(jsonRes.data[0].lat);
           setLong(jsonRes.data[0].long);
@@ -42,8 +41,6 @@ export function CardSaver() {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((loc) => {
           setUser({"data":[{"lat": loc.coords.latitude, "long": loc.coords.longitude}]});
-          console.log("Just changed state")
-          console.log(user)
         });
       } else {
         console.log("Geolocation is not supported by this browser.")

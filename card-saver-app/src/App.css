@@ -3,18 +3,20 @@
 }
 
 .App-logo {
+  position: absolute;
+  top: 12px; 
   height: 40vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
-  background-color: #282c34;
+  background-color: #848d9e;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +24,183 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.Card-location {
+  position: absolute;
+  top: 350px; 
+  height: 10vmin;
+  pointer-events: none;
+  left: 90px;
+  color: white;
+}
+
+.Refresh-button {
+  position: absolute;
+  top: 400px; 
+  height: 10vmin;
+  pointer-events: none;
+  left: 127px;
+}
+
+.Card-deactivate {
+  position: absolute;
+  top: 480px;
+  height: 10vmin;
+  pointer-events: none;
+  left: 90px;
+  color: white;
+}
+
+.Anti-theft {
+  position: absolute;
+  top: 530px;
+  height: 10vmin;
+  pointer-events: none;
+  left: 90px;
+  color: white;
+}
+
+.Tracking {
+  position: absolute;
+  top: 580px;
+  height: 10vmin;
+  pointer-events: none;
+  left: 90px;
+  color: white;
+}
+
+.toggle-container-1 {
+  position: absolute;
+  top: 225px; right: 0; bottom: 0; left: 175px;
+  height: 50px;
+  margin: auto;
+  text-align: center;
+}
+
+.switch-1 input { 
+  position: absolute;
+  opacity: 0;
+}
+
+.switch-1 {
+  display: inline-block;
+  font-size: 20px; 
+  height: 1em;
+  width: 2em;
+  background: #1f4370;
+  border-radius: 1em;
+}
+
+.switch-1 div {
+  height: 1em;
+  width: 1em;
+  border-radius: 1em;
+  background: #FFF;
+  box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
+  -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+.switch-1 input:checked + div {
+  -webkit-transform: translate3d(100%, 0, 0);
+     -moz-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+}
+
+.toggle-container-2 {
+  position: absolute;
+  top: 325px; right: 0; bottom: 0; left: 175px;
+  height: 50px;
+  margin: auto;
+  text-align: center;
+}
+
+.switch-2 input { 
+  position: absolute;
+  opacity: 0;
+}
+
+.switch-2 {
+  display: inline-block;
+  font-size: 20px; 
+  height: 1em;
+  width: 2em;
+  background: #1f4370;
+  border-radius: 1em;
+}
+
+.switch-2 div {
+  height: 1em;
+  width: 1em;
+  border-radius: 1em;
+  background: #FFF;
+  box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
+  -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+.switch-2 input:checked + div {
+  -webkit-transform: translate3d(100%, 0, 0);
+     -moz-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+}
+
+.toggle-container-3 {
+  position: absolute;
+  top: 425px; right: 0; bottom: 0; left: 175px;
+  height: 50px;
+  margin: auto;
+  text-align: center;
+}
+
+.switch-3 input { 
+  position: absolute;
+  opacity: 0;
+}
+
+.switch-3 {
+  display: inline-block;
+  font-size: 20px; 
+  height: 1em;
+  width: 2em;
+  background: #1f4370;
+  border-radius: 1em;
+}
+
+.switch-3 div {
+  height: 1em;
+  width: 1em;
+  border-radius: 1em;
+  background: #FFF;
+  box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
+  -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+.switch-3 input:checked + div {
+  -webkit-transform: translate3d(100%, 0, 0);
+     -moz-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+}
+
+.Contact-support {
+  position: absolute;
+  top: 700px; 
+  height: 10vmin;
+  pointer-events: none;
+  left: 80px;
+}
+
+.Remove-card {
+  position: absolute;
+  top: 700px; 
+  height: 10vmin;
+  pointer-events: none;
+  right: 80px;
 }
 
 .App-link {

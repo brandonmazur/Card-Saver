@@ -10,7 +10,6 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
 
         <CardSaver />
-
         <div className="toggle-container-1">
           <label class="switch-1"><input type="checkbox" />    <div></div>
           </label>

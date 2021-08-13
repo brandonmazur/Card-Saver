@@ -37,7 +37,7 @@ function App() {
       </header>
 
       <div>
-        <p className="Card-deactivate">Deactivate Card</p>
+        <p className="Card-deactivate">Enable Directions</p>
       </div>
 
       <div>
@@ -53,7 +53,7 @@ function App() {
       </button>
 
       <button className="Remove-card">
-        Remove Card
+        Change Settings
       </button>
     </div>
   );

@@ -32,6 +32,7 @@ export class MapContainer extends Component {
     }
   };
 
+
   render() {
     const userLoc = {
       lat: "0",
@@ -77,5 +78,5 @@ export class MapContainer extends Component {
 
 
 export default MapContainer = GoogleApiWrapper({
-  apiKey: 'AIzaSyBpg_e7eQwhNG-xBGN2NDgSjeHgryLTxg4'
+  apiKey: 'AIzaSyCL1e2Z_K6Oz2k6_dBSXmPuAarOVOLWCRE'
 })(MapContainer);

@@ -1,61 +1,82 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MapContainer } from './MapContainer';
 import { CoordinatesDisplayer } from './CoordinatesDisplayer';
-import {getLocation} from './GetUserPos';
-// import { getParams } from './GetUserPos';
 import calculateDistance from './CalculateDist';
 
-let parameters = {"data":{}}
 
 async function attemptBack() {
-  const response =  await fetch('/lastCoordinates')
+  const response =  await fetch('https://card-saver.herokuapp.com/lastCoordinates')
   const body = await response.json()
-  return (body)
-  // console.log(body.data)
+  return body
 }
 
-let card = attemptBack()
-let user = getLocation()
-console.log(user)
-// console.log(calculateDistance(card,user))
-
-// attemptBack();
-
-
-export class CardSaver extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {lat: "loading", long: "loading"};
+export function CardSaver() {
+  const [lat, setLat] = useState("loading");
+  const [long, setLong] = useState("loading");
+  const [card, setCard] = useState({"1": 1});
+  const [user, setUser] = useState({"2": 2});
+  
+  function checkCard() {
+    if(card["1"] !== 1 && user["2"] !== 2 && card.data !== null && user.data !== null && card.data.length > 0 && user.data.length) {
+      return true;
     }
+    return false;
+  }
 
-    async getLastCoordinates() {
-      await fetch("/lastCoordinates").then(res => {
+  useEffect(() => {
+    setInterval(() => {
+      fetch("https://card-saver.herokuapp.com/lastCoordinates").then(res => {
         if(res.ok) {
           return res.json();
         }
       }).then(jsonRes => {
-        this.setState({lat: jsonRes.data[0].lat, long:jsonRes.data[0].long})
+        console.log(jsonRes);
+        try {
+          setLat(jsonRes.data[0].lat);
+          setLong(jsonRes.data[0].long);
+          setCard(jsonRes)
+        } catch(e) {
+          console.log(e);
+        }
       })
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((loc) => {
+          setUser({"data":[{"lat": loc.coords.latitude, "long": loc.coords.longitude}]});
+          console.log("Just changed state")
+          console.log(user)
+        });
+      } else {
+        console.log("Geolocation is not supported by this browser.")
+      }
+    }, 3000) // every 3 seconds, maybe more?
+  }, [])
+  useEffect(() => {
+    if(checkCard()) {
+      // console.log("VALUES")
+      // console.log("user")
+      // console.log(user);
+      // console.log("card")
+      // console.log(card)
+      // console.log(calculateDistance(card, user));
+      // PUT STUFF HERE
     }
-  
-    componentDidMount() {
-      this.interval = setInterval(
-        () => this.getLastCoordinates(),
-        5000 //update coordinates every 5 seconds
-      );
+  }, [user])
+  useEffect(() => {
+    if(checkCard()) {
+      // console.log("VALUES")
+      // console.log("user")
+      // console.log(user);
+      // console.log("card")
+      // console.log(card)
+      // console.log(calculateDistance(card, user));
+      // PUT STUFF HERE
     }
-  
-    componentWillUnmount() {
-      clearInterval(this.interval); //clear interval to prevent memory leaks
-    }
-
-    render() {
-      return (
-        <div>
-          {/*<h2>Your card's location as of {this.state.date.toLocaleTimeString()}</h2>*/}
-          <MapContainer />
-          <CoordinatesDisplayer lat={this.state.lat} long={this.state.long}/>
-        </div>
-      );
-    }
+  }, [card])
+  return (
+    <div>
+      {/*<h2>Your card's location as of {this.state.date.toLocaleTimeString()}</h2>*/}
+      <MapContainer />
+      <CoordinatesDisplayer lat={lat} long={long}/>
+    </div>
+  );
 }

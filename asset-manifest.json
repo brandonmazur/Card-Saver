@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Card-Saver/static/css/main.641ebcf5.chunk.css",
+    "main.js": "/Card-Saver/static/js/main.3f99e950.chunk.js",
+    "main.js.map": "/Card-Saver/static/js/main.3f99e950.chunk.js.map",
+    "runtime-main.js": "/Card-Saver/static/js/runtime-main.d73572a0.js",
+    "runtime-main.js.map": "/Card-Saver/static/js/runtime-main.d73572a0.js.map",
+    "static/js/2.8ca9a6bb.chunk.js": "/Card-Saver/static/js/2.8ca9a6bb.chunk.js",
+    "static/js/2.8ca9a6bb.chunk.js.map": "/Card-Saver/static/js/2.8ca9a6bb.chunk.js.map",
+    "static/js/3.969cfc54.chunk.js": "/Card-Saver/static/js/3.969cfc54.chunk.js",
+    "static/js/3.969cfc54.chunk.js.map": "/Card-Saver/static/js/3.969cfc54.chunk.js.map",
+    "index.html": "/Card-Saver/index.html",
+    "static/css/main.641ebcf5.chunk.css.map": "/Card-Saver/static/css/main.641ebcf5.chunk.css.map",
+    "static/js/2.8ca9a6bb.chunk.js.LICENSE.txt": "/Card-Saver/static/js/2.8ca9a6bb.chunk.js.LICENSE.txt",
+    "static/media/Card_Saver.d3c339ba.svg": "/Card-Saver/static/media/Card_Saver.d3c339ba.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d73572a0.js",
+    "static/js/2.8ca9a6bb.chunk.js",
+    "static/css/main.641ebcf5.chunk.css",
+    "static/js/main.3f99e950.chunk.js"
+  ]
+}

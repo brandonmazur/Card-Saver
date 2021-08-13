@@ -25,6 +25,7 @@ export class MapContainer extends Component {
     }
   };
 
+
   render() {
     return (
       <CardCurrentLocation
@@ -32,6 +33,7 @@ export class MapContainer extends Component {
         google={this.props.google}
       >
         <Marker onClick={this.onMarkerClick} name={'Current Location'} />
+        <Marker onClick={this.onMarkerClick} name={'Current 111Location'} />
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}
@@ -49,5 +51,5 @@ export class MapContainer extends Component {
 
 
 export default MapContainer = GoogleApiWrapper({
-  apiKey: 'AIzaSyBpg_e7eQwhNG-xBGN2NDgSjeHgryLTxg4'
+  apiKey: 'AIzaSyCL1e2Z_K6Oz2k6_dBSXmPuAarOVOLWCRE'
 })(MapContainer);
